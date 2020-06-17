@@ -1,5 +1,15 @@
 spring:
   profiles: dev
+  h2:
+    console:
+      enabled: true
+      path: /console
+  datasource:
+    url: jdbc:h2:mem:testdb
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
 server:
   port: 8000
 ---
@@ -7,6 +17,11 @@ spring:
   profiles: test
 server:
   port: 9000
+
+
+
+
+
 
 
 
